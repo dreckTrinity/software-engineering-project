@@ -5,8 +5,12 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('login');
+app.route("/").get((req, res) => {
+    res.render('pages/login.ejs');
+});
+
+app.route("/login").get((req, res) => {
+    res.render('pages/login.ejs');
 });
 
 app.listen(3000, () => {
