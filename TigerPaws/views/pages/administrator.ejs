@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+    </head>
+    <style>
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .topnav{
+            background-color: #791910;
+            height: 10%;
+        }
+
+        .buttons button{
+            position: relative;
+            width: 10%;
+            height: 50%;
+            font-size: large;
+            margin-right: 1.5%;
+        }
+
+        .title p{
+            font-size:xx-large;
+            color: #ffffff;
+        }
+
+        .body button{
+            position: relative;
+            /*top: 50%;
+            left: 30%;*/
+            background-color: #d7bab7;
+            border-color: black;
+            width: 40%;
+            height: 10%;
+            font-size: x-large;
+            display: block;
+            margin-bottom: 1.5%;
+            font-weight: bold;
+        }
+
+        .body button:hover{
+            background-color: #9a8381;
+        }
+
+        .logo img{
+            max-width: 30%;
+        }
+
+
+    </style>
+    <body>
+         <!-- Top red navigation bar -->
+        <div class="topnav">
+
+            <!-- Role title in the upleft corner -->
+            <div class="title" style = "position: relative; left: 3%; top:20%">
+                <p>Administrator</p> 
+            </div>
+
+            <!-- Help and Log Out button in the upright corner -->
+            <div class="buttons" style ="position: relative; left:75%; top:-60%;">
+                <button type="button">Help</button>
+                <button type="button">Log Out</button>
+            </div>
+
+        </div>
+
+        <!-- Page's main buttons -->
+        <div class="body" style = "position: relative; left:30%; top:30%;">
+
+            <button type="button">Manage Courses</button> <!-- First main button of the page -->
+            <button type="button">Manage Users</button> <!-- Second main button of the page -->
+            <button type="button">Manage Students</button> <!-- Third main button of the page -->
+            <button type="button">Course Catalogs</button> <!-- Fourth main button of the page -->
+            
+
+        </div>
+
+        <!-- Trinity Logo at the bottom of the page -->
+        <div class="logo" style="position: relative; left:35%; top:35%"> 
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Trinity_Tigers_logo.svg/1200px-Trinity_Tigers_logo.svg.png">
+        </div>
+
+    </body>
+</html>
