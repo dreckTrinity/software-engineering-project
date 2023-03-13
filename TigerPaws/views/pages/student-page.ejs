@@ -3,6 +3,88 @@
     <head>
         <title>Home Page</title>
     </head>
+    <link rel="homepages" type="text/css" href="CSS/homepages.css">
+    <style>
+        .navigationPanel{
+            background-color: #791910;
+            margin: 0%;
+            display: grid;
+            grid-auto-flow: column;       
+            grid-gap: 3rem;
+            box-sizing: border-box;
+            border:  solid #791910;
+        }
+
+        .navigationPanel p{
+            font-size: x-large;
+            color: white;
+            position: relative;
+            left: 5rem;
+        }
+
+        .navigationPanel a{
+            font-size: x-large;
+            color: white;
+            text-align:center;
+            line-height: 3;
+            
+        }
+
+        /*
+        .navigationPanel button{
+            font-size: large;
+            text-align: center;
+        }
+        */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2rem;
+        }
+
+        .body{
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        .buttons button{
+            background-color: #d7bab7;
+            border-color: black;
+            font-size: x-large;    
+            font-weight: bold;
+            margin: 1rem;           
+        }
+
+        .buttons button:hover{
+            background-color: #9a8381;
+        }
+    </style>
+
+    <body>
+        <div class="navigationPanel">
+           <p>Student</p> 
+           <div></div>
+           <div></div>
+           <a href>Help</a>
+           <a href>Log Out</a>
+           <!--
+           <button type="button">Help</button>
+           <button type="button">Log Out</button>
+           -->
+        </div>
+        <div class = "body">
+            <div></div>
+            <div class="buttons">
+                <button type="button">Search Courses</button>
+                <button type="button">View Registered Classes</button>
+            </div>
+            <div></div>
+        </div>
+    </body>
+   <!-- <head>
+        <title>Home Page</title>
+    </head>
     <style>
 
         body {
@@ -76,5 +158,5 @@
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Trinity_Tigers_logo.svg/1200px-Trinity_Tigers_logo.svg.png">
         </div>
 
-    </body>
+    </body>-->
 </html>

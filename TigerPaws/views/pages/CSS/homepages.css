@@ -1,45 +1,43 @@
-
-body {
-    background-color: #ffffff;
+.navigationPanel{
+    background-color: #791910;
+    margin: 0%;
+    display: grid;
+    grid-auto-flow: column;       
+    grid-gap: 3rem;
+    box-sizing: border-box;
+    border: 1rem solid #791910;
 }
 
-.topnav{
-    background-color: #791910;
-    height: 10%;
+.navigationPanel p{
+    font-size: x-large;
+    color: white;
+}
+
+.navigationPanel button{
+    font-size: large;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.body{
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .buttons button{
-    position: relative;
-    width: 10%;
-    height: 50%;
-    font-size: large;
-    margin-right: 1.5%;
-}
-
-.title p{
-    font-size:xx-large;
-    color: #ffffff;
-}
-
-.body button{
-    position: relative;
-    /*top: 50%;
-    left: 30%;*/
     background-color: #d7bab7;
     border-color: black;
-    width: 40%;
-    height: 10%;
-    font-size: x-large;
-    display: block;
-    margin-bottom: 1.5%;
+    font-size: x-large;    
     font-weight: bold;
+    margin: 1rem;           
 }
 
-.body button:hover{
+.buttons button:hover{
     background-color: #9a8381;
 }
-
-.logo img{
-    max-width: 30%;
-}
-
