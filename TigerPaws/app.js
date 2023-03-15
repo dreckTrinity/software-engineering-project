@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 
@@ -14,6 +15,7 @@ app.route("/login").get((req, res) => {
 });
 
 app.route("/professor-page").get((req, res) => {
+    res
     res.render('pages/professor-page.ejs');
 });
 
