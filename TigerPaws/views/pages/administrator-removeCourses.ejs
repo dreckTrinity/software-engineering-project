@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Course List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bottom three links provide access to BootStrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Top Red Navigation Bar -->
+<div class="container">
+    <nav class="navbar navbar-inverse" style="background-color: #840705;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="color: white;">Manage Courses</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+          </ul>
+        </div>
+    </nav>
+</div>
+
+
+<div class="container">
+    <!-- First Row -->
+    <div class="row">
+        <div class="col-sm-4" style="border:1px solid red;">
+                <div class="buttons"> 
+                    <button type="button" >Remove Course</button>
+                </div>    
+        </div>
+        <div class="col-sm-3" style="border:1px solid red;">
+            empty
+        </div>
+        <div class="col-sm-4" style="border:1px solid red;">
+            <!--
+            <div class="input-group">
+                <div class="form-outline">
+                  <input type="search" id="form1" class="form-control" />
+                  <label class="form-label" for="form1">Search</label>
+                </div>
+                <button type="button" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            -->
+
+            
+            <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            
+        </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row">
+        <div class="col-sm-4" style="border:1px solid red;">
+                <div class="buttons"> 
+                    <button type="button" >Add Course</button>
+                </div>   
+        </div>
+        <div class="col-sm-4" style="border:1px solid red;">
+            empty
+        </div>
+        <div class="col-sm-4" style="border:1px solid red;">
+            <div class="buttons"> 
+                <button type="button" >Remove Course</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="row">
+        <div class="col-sm-4" style="border:1px solid red;">
+                <div class="buttons"> 
+                    <button type="button" >View Submitted Courses</button>
+                </div>   
+        </div>
+        <div class="col-sm-4" style="border:1px solid red;">
+            empty
+        </div>
+        <div class="col-sm-4" style="border:1px solid red;">
+            empty
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
