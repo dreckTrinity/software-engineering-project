@@ -9,6 +9,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
+<style>
+  .body button{
+            position: relative;
+            /*top: 50%;
+            left: 30%;*/
+            background-color: #d7bab7;
+            border-color: black;
+            width: 143%; /*40%*/
+            height: 10%; /*10%*/
+            font-size: x-large;
+            display: block;
+            margin-bottom: 1.5%;
+            font-weight: bold;
+        }
+
+  .body button:hover{
+          background-color: #9a8381;
+  }
+
+</style>
+
 <body>
 <!-- Top Red Navigation Bar -->
 <div class="container">
@@ -26,19 +48,31 @@
     </nav>
 </div>
 
+<!--
+  CURRENT ISSUE:
+    I have a search bar and search button. The issue is that the style specs for the body's button also applies to the search button.
+    As a result, the search button is horizontally long and placed underneath the search bar rather than to the left of it. 
+-->
 
 <div class="container">
     <!-- First Row -->
-    <div class="row">
-        <div class="col-sm-4" style="border:1px solid red;">
-                <div class="buttons"> 
-                    <button type="button" >Remove Course</button>
-                </div>    
+    <div class="body">
+      
+      <!-- Column 1 -->
+      
+        <div class="col-sm-4" style="height:100px; border:1px solid red;"> 
+          <div class="buttons"> 
+            <button type="button" >Remove Course</button>
+          </div>    
         </div>
-        <div class="col-sm-3" style="border:1px solid red;">
-            empty
-        </div>
-        <div class="col-sm-4" style="border:1px solid red;">
+
+        <!-- Column 2 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;"> </div>
+
+        <!-- Column 3 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;" >
+
+            <!-- Alternative Search Bar -->
             <!--
             <div class="input-group">
                 <div class="form-outline">
@@ -51,47 +85,55 @@
               </div>
             -->
 
-            
-            <div class="search-container">
-                <form action="/action_page.php">
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-            
+          <!-- Search Bar -->
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search for course" name="search" style="height:30px; ">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>    
         </div>
+
     </div>
 
     <!-- Second Row -->
-    <div class="row">
-        <div class="col-sm-4" style="border:1px solid red;">
-                <div class="buttons"> 
-                    <button type="button" >Add Course</button>
-                </div>   
+    <div class="body">
+
+        <!-- Column 1 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;"> 
+          <div class="buttons"> 
+            <button type="button"  >Add Course</button>
+          </div>   
         </div>
-        <div class="col-sm-4" style="border:1px solid red;">
-            empty
+
+        <!-- Column 2 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;"></div>
+
+        <!-- Column 3 -->
+        <div class="col-sm-3" style="height:100px; border:1px solid red;">
+          <div class="buttons"> 
+            <button type="button" >Remove Course</button>
+          </div>
         </div>
-        <div class="col-sm-4" style="border:1px solid red;">
-            <div class="buttons"> 
-                <button type="button" >Remove Course</button>
-            </div>
-        </div>
+
     </div>
 
     <!-- Third Row -->
-    <div class="row">
-        <div class="col-sm-4" style="border:1px solid red;">
+    <div class="body">
+
+        <!-- Column 1 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;">
                 <div class="buttons"> 
                     <button type="button" >View Submitted Courses</button>
                 </div>   
         </div>
-        <div class="col-sm-4" style="border:1px solid red;">
-            empty
-        </div>
-        <div class="col-sm-4" style="border:1px solid red;">
-            empty
-        </div>
+
+        <!-- Column 2 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;"></div>
+
+        <!-- Column 3 -->
+        <div class="col-sm-4" style="height:100px; border:1px solid red;"></div>
+
     </div>
 
 </div>
