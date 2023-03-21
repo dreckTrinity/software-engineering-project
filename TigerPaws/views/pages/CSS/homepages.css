@@ -1,45 +1,56 @@
+        /*IF YOU CHANGE THIS YOU WILL CHANGE ALL HOMEPAGES SO BE CAREFUL*/
+        .navigationPanel{
+            background-color: #791910;
+            margin: 0%;
+            display: grid;
+            grid-auto-flow: column;       
+            grid-gap: 3rem;
+            box-sizing: border-box;
+            border:  solid #791910;
+        }
 
-body {
-    background-color: #ffffff;
-}
+        .navigationPanel p{
+            font-size: x-large;
+            color: white;
+            position: relative;
+            left: 5rem;
+        }
 
-.topnav{
-    background-color: #791910;
-    height: 10%;
-}
+        .navigationPanel a{
+            font-size: x-large;
+            color: #000;
+            text-align:center;
+            line-height: 3;
+        }
 
-.buttons button{
-    position: relative;
-    width: 10%;
-    height: 50%;
-    font-size: large;
-    margin-right: 1.5%;
-}
 
-.title p{
-    font-size:xx-large;
-    color: #ffffff;
-}
 
-.body button{
-    position: relative;
-    /*top: 50%;
-    left: 30%;*/
-    background-color: #d7bab7;
-    border-color: black;
-    width: 40%;
-    height: 10%;
-    font-size: x-large;
-    display: block;
-    margin-bottom: 1.5%;
-    font-weight: bold;
-}
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2rem;
+        }
 
-.body button:hover{
-    background-color: #9a8381;
-}
+        .body{
+            display: grid;
+            grid-auto-flow: column;
+        }
 
-.logo img{
-    max-width: 30%;
-}
+        .buttons button{
+            background-color: #d7bab7;
+            border-color: black;
+            font-size: x-large;    
+            font-weight: bold;
+            margin: 1rem;     
+            height: 3rem;      
+        }
 
+        .buttons button:hover{
+            background-color: #9a8381;
+        }
+
+        .logo{
+            display: grid;
+            grid-auto-flow: column;
+        }

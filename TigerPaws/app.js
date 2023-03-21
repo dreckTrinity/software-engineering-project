@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+var path = require('path')
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
