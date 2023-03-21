@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+var path = require('path')
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,8 +16,7 @@ app.route("/login").get((req, res) => {
 });
 
 app.route("/professor-page").get((req, res) => {
-    res
-    res.render('pages/professor-page.ejs');
+    res.render('pages/professor-page-remake.ejs');
 });
 
 
