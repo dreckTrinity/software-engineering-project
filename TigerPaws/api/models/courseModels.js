@@ -23,5 +23,5 @@ const courseSchema = new mongoose.Schema ({
 //The first argument is the singular name of the collection your model is for. 
 //Mongoose automatically looks for the plural, lowercased version of your model name.
 //Second arg is the schema
-const Course = ('Course', courseSchema)
+const Course = mongoose.model('Course', courseSchema)
 module.exports = Course
