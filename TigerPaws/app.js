@@ -50,16 +50,6 @@ app.route("/").get((req, res) => {
 
 app.route("/login").get((req, res) => {
     res.render('pages/login-remake.ejs');
-    let loginForm = document.getElementById("loginForm");
-    loginForm.addEventListener("submit", (e) => {
-
-        let email= document.getElementById("email");
-        let password = document.getElementById("pwd");
-
-        console.log("test test test")
-        console.log(email)
-
-    })
 });
 
 app.route("/successfulLogin").get((req, res) => {
@@ -74,7 +64,9 @@ app.route("/manage-courses-student").get((req,res) => {
 app.route("/course-list-page").get((req,res) => {
     res.render('pages/course-list-page');
 });
-
+app.route("/course-search-page").get((req,res) => {
+    res.render('pages/course-search-page')
+})
 //Using router const, duh
 app.use(Router)
 
