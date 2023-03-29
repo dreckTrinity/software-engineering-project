@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Course List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bottom three links provide access to BootStrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Top Nav Bar-->
+    <div class="container">
+        <nav class="navbar navbar-inverse" style="background-color: #840705;">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color: white;">Tiger Feet</a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+              </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <button type="button" class="btn-block" style="background-color: #ddb9b6;margin-bottom: 2rem; font-size: large;">Add course</button>
+                <button type="button" class="btn-block" style="background-color: #ddb9b6;margin-bottom: 2rem; font-size: large;">Manage Courses</button>
+                <button type="button" class="btn-block" style="background-color: #ddb9b6; font-size: large;">View Submitted Course</button>
+            </div>
+            <div class="col-sm-7">
+                <div class="form-horizontal">
+                    <div class="input-group-addon"><input id="Course Title" type="text" class="form-control" name="Course Title" placeholder="Course Title"></div>
+                    <div class="input-group-addon"><input id="Course Number" type="number" class="form-control" name="Course Number" placeholder="Course Number"></div>
+                    <label for="sel1">Department</label>
+                    <select class="form-control" id="sel-filter-true" >
+                    <option>URBS</option>
+                    <option>CSCI</option>
+                    <option>MATH</option>
+                    <option>GRST</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
