@@ -20,4 +20,21 @@ app.get("/courses", async (req, res) => {
     }
   })
 
+  app.post("/userLogin", async(req, res) => {
+    const email = req.body.email
+    const pwd = req.body.pwd
+    console.log("request made")
+    console.log(email)
+    console.log(pwd)
+    //if successfull got to another page
+  })
+
+
+  app.post("/courseSearch", async(req, res) => {
+    const course = req.body.course
+    console.log("request made")
+    console.log(course)
+    
+    //print courses into log
+  })
 module.exports = app

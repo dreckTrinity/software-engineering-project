@@ -66,6 +66,15 @@ app.route("/manage-courses-student").get((req,res) => {
 app.route("/course-list-page").get((req,res) => {
     res.render('pages/course-list-page');
 });
+app.route("/course-search-page").get((req,res) => {
+    res.render('pages/course-search-page')
+})
+app.route("/student-page").get((req,res) => {
+    res.render('pages/student-page')
+})
+app.route("/professor-page").get((req,res) => {
+    res.render('pages/professor-page-remake')
+})
 
 //Using router const, duh
 app.use(RouterCourses)
