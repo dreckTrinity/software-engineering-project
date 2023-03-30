@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-
+//Schema is essentially describing what the document will look like
 const courseSchema = new mongoose.Schema ({
     name: String,
     courseNum: Number,

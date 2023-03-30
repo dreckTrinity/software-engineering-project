@@ -2,6 +2,8 @@ const express = require("express");
 //Requiring model so that it is using the course schema 
 const courseModel = require("../models/courseModels");
 const app = express();
+//Body parser is necessary because it is used to understnad
+//the request body
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
@@ -16,13 +18,6 @@ app.get("/courses", async (req, res) => {
     } catch (error) {
         res.status(500).send(error);
     }
-  })
-
-  app.post("/userLogin", async(req, res) => {
-    const email = req.body.email
-    console.log("request made")
-    console.log(email)
-    //if successfull got to another page
   })
 
 module.exports = app

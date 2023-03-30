@@ -23,7 +23,9 @@ const mongoose = require("mongoose");
 //Use to make routes so we can have separate files with HTTP requests
 //It's referencing a folder called routes in the same directory where route files would be kept and
 //then can be used to handle requests
-const Router = require("./api/routes/courses")
+const RouterCourses = require("./api/routes/courses")
+const RouterUsers = require("./api/routes/users")
+
 app.use(express.json());
 //connecting to cluster
 //I don't know if it was to connect to my account?
@@ -66,7 +68,8 @@ app.route("/course-list-page").get((req,res) => {
 });
 
 //Using router const, duh
-app.use(Router)
+app.use(RouterCourses)
+app.use(RouterUsers)
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
