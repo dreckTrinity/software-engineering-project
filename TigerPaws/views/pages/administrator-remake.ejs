@@ -2,9 +2,65 @@
 <html>
     <head>
         <title>Home Page</title>
-        <link rel="stylesheet" href="CSS/homepages.css">
+        <link rel="stylesheet" type= "text/CSS" href="CSS/homepages.css">
     </head>
-   
+   <style>
+            .navigationPanel{
+            background-color: #791910;
+            margin: 0%;
+            display: grid;
+            grid-auto-flow: column;       
+            grid-gap: 3rem;
+            box-sizing: border-box;
+            border:  solid #791910;
+        }
+
+        .navigationPanel p{
+            font-size: x-large;
+            color: white;
+            position: relative;
+            left: 5rem;
+        }
+
+        .navigationPanel a{
+            font-size: x-large;
+            color: #000;
+            text-align:center;
+            line-height: 3;
+        }
+
+
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2rem;
+        }
+
+        .body{
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        .buttons button{
+            background-color: #d7bab7;
+            border-color: black;
+            font-size: x-large;    
+            font-weight: bold;
+            margin: 1rem;     
+            height: 3rem;      
+        }
+
+        .buttons button:hover{
+            background-color: #9a8381;
+        }
+
+        .logo{
+            display: grid;
+            grid-auto-flow: column;
+        }
+   </style>
     <body>
         <div class="navigationPanel">
            <p>Administrator</p> 
