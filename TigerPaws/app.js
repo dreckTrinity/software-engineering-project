@@ -36,6 +36,10 @@ app.route("/manage-courses-student").get((req,res) => {
 app.route("/course-list-page").get((req,res) => {
     res.render('pages/course-list-page');
 });
+app.route("/student-page").get((req,res) => {
+    res.render('pages/student-page');
+});
+
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
