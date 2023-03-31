@@ -46,7 +46,6 @@ db.once("open", function () {
 
 //Routes that can be made into separate files with routes?
 app.route("/").get((req, res) => {
-    
     res.render('pages/login-remake.ejs');
 });
 
