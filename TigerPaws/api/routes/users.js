@@ -21,15 +21,25 @@ app.post("/userLogin", async(req, res) => {
     console.log(pwd)
     console.log(userMatches)
 
-    if (userMatches == null) {
+    if (userMatches.length == 0) {
         console.log("No such user found. Make sure username and password are correct.")
+        res.render(path.join(__dirname, '/../../views/pages/login-remake.ejs'))
         //send response
     } else {
+      var user = userMatches[0];
+      var role = user.userType;
+      if(role == 'admin'){
+        res.render(path.join(__dirname, '/../../views/pages/administrator-remake.ejs'))
+      }else if(role == 'professor'){
+        res.render(path.join(__dirname, '/../../views/pages/professor-page-remake.ejs'))
+      } else {
+        res.render(path.join(__dirname, '/../../views/pages/student-page.ejs'))
+      }
       //if successfull got to another page
       //render then res.send?
 
       //render this page
-      res.render(path.join(__dirname, '/../../views/pages/administrator-remake.ejs'))
+      
     }
   
   })
