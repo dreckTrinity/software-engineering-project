@@ -74,7 +74,15 @@ app.route("/student-page").get((req,res) => {
 app.route("/professor-page").get((req,res) => {
     res.render('pages/professor-page-remake')
 })
-
+app.route("/administrator-addCourses").get((req,res) => {
+    res.render('pages/administrator-addCourses')
+})
+app.route("/administrator-removeCourses").get((req,res) => {
+    res.render('pages/administrator-removeCourses')
+})
+app.route("/help-page").get((req,res) => {
+    res.render('pages/help-page')
+})
 //Using router const, duh
 app.use(RouterCourses)
 app.use(RouterUsers)

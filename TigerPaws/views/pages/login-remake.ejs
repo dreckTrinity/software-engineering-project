@@ -7,18 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script>
-		function login() {
-			// Perform any necessary client-side validation
-			//This is typically where backend functionality is put
-			//This is where we'd check for a user
-			// Redirect to the successful login page
-
-			window.location = "/administrator-remake";
-      console.log(document.getElementByID("email").value)
-
-		}
-	</script>
 </head>
 <body>
     <div class="text-center" style="margin: 2rem">
@@ -52,12 +40,15 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <div class="col-sm-offset-0 col-sm-10">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                          <div class="col-sm-offset-0 col-sm-10"><!-- href needs to be put in the function so we can check -->
+                            <button type="submit" onclick="location.href='student-page';" class="btn btn-default">Submit1</button>
                           </div>
                         </div>
                   </form>
                 </div>
+            </div>
+            <div hidden class="alert alert-warning" id="loginAlert">
+              No such user found. Make sure username and password are correct
             </div>
             </div>
             <div class="col-sm-4"></div>
