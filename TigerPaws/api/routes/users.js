@@ -5,6 +5,10 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 const path = require('path')
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
 
 app.post("/userLogin", async(req, res) => {
     //req.body.email is referencing the email variable in the received request body
@@ -40,7 +44,21 @@ app.post("/userLogin", async(req, res) => {
 
       //render this page
       
+      
     }
+    // create a cookie
+    const userId = cookie1
+    const cookieOptions = {
+      maxAge: 24 * 60 * 60 * 1000, // cookie will expire in 24 hours
+      httpOnly: true, // cookie can only be accessed via HTTP(S)
+      signed: true // cookie will be signed
+  };
+  res.cookie('userId', userId, cookieOptions);
+
+  res.send('You are logged in!');
+    
+    
+
   
   })
 
