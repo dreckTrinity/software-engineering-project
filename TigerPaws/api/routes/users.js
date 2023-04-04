@@ -21,7 +21,7 @@ app.post("/userLogin", async(req, res) => {
     console.log(pwd)
     console.log(userMatches)
 
-    if (userMatches == null) {
+    if (userMatches.length == 0) {
         console.log("No such user found. Make sure username and password are correct.")
         //send response
     } else {
