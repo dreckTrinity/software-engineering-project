@@ -70,6 +70,15 @@ app.route("/course-search-page").get((req,res) => {
 })
 app.route("/student-page").get((req,res) => {
     res.render('pages/student-page')
+    const userId = req.signedCookies.userId;
+    if (userId) {
+    // find user in database
+    // ...
+
+    res.send(`Welcome back, ${user.name}!`);
+  } else {
+    //redirect to login page 
+  }
 })
 app.route("/professor-page").get((req,res) => {
     res.render('pages/professor-page-remake')
