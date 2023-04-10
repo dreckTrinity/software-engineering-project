@@ -95,17 +95,14 @@
                 <th scope="col">Instructor</th>
                 <th scope="col"></th>
             </tr>
+
+            <!--Starts a loop where a new row of the table is drawn for every element in courses (see courses.js for detail on courses)-->
             <% for(var i=0; i<courses.length; i++) {%>
-                <!--<li class="list-group-item">
-                    <span>Course</span><%= courses[i].name %>
-                    <span>Dept</span><%= courses[i].courseDept%>
-                    <span>Num</span><%= courses[i].courseNum%>
-                </li>-->
             <tr>
 
 
-                <td><%= courses[i].name %></td> 
-                <td><button data-toggle="collapse" data-target="#demo" style="background-color:#b9291b8e;">Principle of Software Engineering</button>
+                <td><%= courses[i].courseDept %>-<%= courses[i].courseNum %> <%= courses[i].courseSection %></td> 
+                <td><button data-toggle="collapse" data-target="#demo" style="background-color:#b9291b8e;"><%= courses[i].name %></button>
 
                 <div id="demo" class="collapse"><%= courses[i].courseDescription %>
                 </div></td>
