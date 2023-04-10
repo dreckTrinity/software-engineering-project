@@ -95,35 +95,27 @@
                 <th scope="col">Instructor</th>
                 <th scope="col"></th>
             </tr>
+            <% for(var i=0; i<courses.length; i++) {%>
+                <!--<li class="list-group-item">
+                    <span>Course</span><%= courses[i].name %>
+                    <span>Dept</span><%= courses[i].courseDept%>
+                    <span>Num</span><%= courses[i].courseNum%>
+                </li>-->
             <tr>
-                <td>CSCI-1320-1</td>
+
+
+                <td><%= courses[i].name %></td> 
                 <td><button data-toggle="collapse" data-target="#demo" style="background-color:#b9291b8e;">Principle of Software Engineering</button>
 
-                <div id="demo" class="collapse">
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
+                <div id="demo" class="collapse"><%= courses[i].courseDescription %>
                 </div></td>
-                <td>M,W,F</td>
-                <td>10:30-11:20 AM</td>
-                <td>Matthew Hibbs</td>
+                <td><%= courses[i].meetingTime.days%></td>
+                <td><%= courses[i].meetingTime.startTime%> - <%= courses[i].meetingTime.endTime%></td>
+                <td><%= courses[i].instructor%></td>
                 <td><button type="button" class="btn" style="background-color: #ddb9b6;">Register</button></td>
+
             </tr>
-            <tr>
-                <td>CSCI-1320-2</td>
-                <td><button data-toggle="collapse" data-target="#demo" style="background-color:#b9291b8e;">Principle of Software Engineering</button>
-                <div id="demo" class="collapse">
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                    This is a class all about cool things like programming and having no idea whats happening i guessi should add more text incase some professor goes above and beyond and really just CRAMS the box full of text, like a few paragrahps or smth idk
-                </div></td>
-                <td>M,W,F</td>
-                <td>11:30-12-20 AM</td>
-                <td>Seth Fogartree</td>
-                <td><button type="button" class="btn" style="background-color: #ddb9b6;">Register</button></td>
-            </tr>
+            <% } %>   
         </tbody>
     </thead>
 </table>

@@ -28,11 +28,12 @@ app.post("/userLogin", async(req, res) => {
     } else {
       var user = userMatches[0];
       var role = user.userType;
+      console.log(role)
       if(role == 'admin'){
         res.render(path.join(__dirname, '/../../views/pages/administrator-remake.ejs'))
       }else if(role == 'professor'){
         res.render(path.join(__dirname, '/../../views/pages/professor-page-remake.ejs'))
-      } else {
+      } else if(role == 'student'){
         res.render(path.join(__dirname, '/../../views/pages/student-page.ejs'))
       }
       //if successfull got to another page

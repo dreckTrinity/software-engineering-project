@@ -26,7 +26,7 @@
         </nav>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-sm-5">
                 <button type="button" class="btn-block" style="background-color: #ddb9b6;margin-bottom: 2rem; font-size: large;">Add course</button>
@@ -46,6 +46,59 @@
                     </select>
                 </div>
             </div>
+        </div>
+    </div>-->
+    <div class="container">
+        <div class="panel">
+          <form class="form-group" action="/addCourse" method="post">
+            <!--Course Name-->
+            <div class="form-group">
+              <label for="courseName">Course Name:</label>
+              <input type="text" class="form-control" id="courseName">
+            </div>
+            <!--Course Number-->
+            <div class="form-group">
+              <label for="courseNum">Course Number</label>
+              <input type="number" class="form-control" id="courseNum">
+            <!--Course Dpt-->
+              <label for="dept">Course Department</label>
+              <input type="search" class="form-control" id="dept">
+            <!--instructor-->
+              <label for="instructor">instructor</label>
+              <input type="text" class="form-control" id="instructor">
+            <!--credit hours-->
+              <label for="credits">Credit Hours</label>
+              <input type="number" class="form-control" id="credits">
+            </div>
+            <!--pathways-->
+            <div class="form-group">
+              <label for="pathways">Pathways</label>
+              <input type="text" class="form-control" id="pathways">
+            </div>
+            <!--prerequisites-->
+            <div class="form-group">
+              <label for="prerequisites">Prerequisites</label>
+              <input type="text" class="form-control" id="prerequisites">
+            </div>
+            <!--location stuff-->
+            <div class="form-group">
+              <label for="building">Building Name</label>
+              <input type="text" class="form-horizontal" id="building">
+              <label for="roomNum">Room Number</label>
+              <input type="number" class="form-horizontal" id="roomNum">
+            </div>
+            <!--meeting time-->
+            <div class="form-group">
+              <label for="meetingDays">Meeting Days</label>
+              <input type="checkbox" class="form-horizontal" id="Mon">
+              
+            </div>
+            <!--description-->
+            <div class="form-group">
+              <label for="courseDescription">Course Description</label>
+              <input for="text" class="form-control" id="courseDescription">
+            </div>
+          </form>
         </div>
     </div>
 
