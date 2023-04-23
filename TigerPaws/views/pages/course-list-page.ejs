@@ -1,9 +1,17 @@
+<!--
+                                  COURSE LIST PAGE
+Page comes with a button for Filter and Course Info. There are dropdown menus for Department, Credits,
+Days, and Pathways. Furthermore, it has the standard Top Nav Bar and a table for Courses.
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Course List</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bottom three links provide access to BootStrap and CSS stylesheet-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -17,8 +25,11 @@
             <a class="navbar-brand" href="#" style="color: white;">TigerFeet</a>
           </div>
           <ul class="nav navbar-nav navbar-right">
+            <!--Find Course Button-->
             <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+            <!--Help Button-->
             <li><a href="#" data-toggle="popover" title="Follow this Link for Online Resources" data-content="Resources"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <!--Log Out Button-->
             <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
           </ul>
         </div>
@@ -32,6 +43,7 @@
             <div class="dropdown"> 
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #791910;">Department
             <span class="caret"></span></button>
+            <!--Department Dropdown Menu-->
             <ul class="dropdown-menu">
               <li><a href="#">CSCI</a></li>
               <li><a href="#">GRST</a></li>
@@ -43,6 +55,7 @@
           <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #791910;">Credits
                 <span class="caret"></span></button>
+                <!--Credits Dropdown Menu-->
                 <ul class="dropdown-menu">
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
@@ -55,6 +68,7 @@
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #791910;">Days
                     <span class="caret"></span></button>
+                    <!--Days Dropdown Menu-->
                     <ul class="dropdown-menu">
                     <li><a href="#">M,W,F</a></li>
                     <li><a href="#">T,Th</a></li>
@@ -66,6 +80,7 @@
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #791910;">Pathways
                     <span class="caret"></span></button>
+                    <!--Pathways Dropdown Menu-->
                     <ul class="dropdown-menu">
                     <li><a href="#">I forgor them</a></li>
                     <li><a href="#">I forgor them</a></li>
@@ -78,6 +93,7 @@
             </div>
         </div>
         <div class="col-sm-2">
+            <!--Filter Button-->
             <button type="button" class="btn" style="background-color: #ddb9b6;">Filter</button>
         </div>
 

@@ -1,3 +1,14 @@
+<!--
+                                  REMOVE COURSES PAGE
+Page comes with a button for Remove Course (twice), Add Course, and View Submitted Courses. Furthermore, 
+it has the standard Top Nav Bar and a search bar for courses.
+
+Kenneth comments that the search bar for Search for Courses is styled wrong. The styling for regular 
+buttons is being applied to the search button, which makes the search button horizontally long and 
+placed underneath the search bar rather than to the left of it. The CSS stylesheet can be found at 
+the comment "Bottom three links provide access to Bootstrap".
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +22,7 @@
 </head>
 
 <style>
+  /*Elements Styling*/
   .body button{
             position: relative;
             /*top: 50%;
@@ -43,11 +55,15 @@
     <nav class="navbar navbar-inverse" style="background-color: #840705;">
         <div class="container-fluid">
           <div class="navbar-header">
+            <!--Page Name-->
             <a class="navbar-brand" href="#" style="color: white;">Manage Courses</a>
           </div>
           <ul class="nav navbar-nav navbar-right">
+            <!--Find Course Button-->
             <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+            <!--Help Button-->
             <li><a href="help-page.ejs"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <!--Log Out Button-->
             <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
           </ul>
         </div>
@@ -65,18 +81,21 @@
     <div class="body">
       
       <!-- Column 1 -->
-      
-        <div class="col-sm-4" style="height:100px; border:1px solid red;"> 
+
+        <!-- NOTES: Place "border:1px solid red;" after height:100px; in order to visualize the Bootstrap grid for button placement. -->
+
+        <div class="col-sm-4" style="height:100px;"> 
           <div class="buttons"> 
+            <!--Remove Course Button-->
             <button type="button" >Remove Course</button>
           </div>    
         </div>
 
         <!-- Column 2 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;"> </div>
+        <div class="col-sm-4" style="height:100px;"> </div>
 
         <!-- Column 3 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;" >
+        <div class="col-sm-4" style="height:100px;" >
 
             <!-- Alternative Search Bar -->
             <!--
@@ -91,7 +110,7 @@
               </div>
             -->
 
-          <!-- Search Bar -->
+          <!-- !!! ISSUE: Search For CourseBar  !!!-->
           <div class="search-container">
             <form action="/action_page.php">
               <input type="text" placeholder="Search for course" name="search">
@@ -111,18 +130,20 @@
     <div class="body">
 
         <!-- Column 1 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;"> 
+        <div class="col-sm-4" style="height:100px;"> 
           <div class="buttons"> 
+            <!--Add Course Button-->
             <button type="button"  >Add Course</button>
           </div>   
         </div>
 
         <!-- Column 2 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;"></div>
+        <div class="col-sm-4" style="height:100px;"></div>
 
         <!-- Column 3 -->
-        <div class="col-sm-3" style="height:100px; border:1px solid red;">
+        <div class="col-sm-3" style="height:100px;">
           <div class="buttons"> 
+            <!--Remove Course Button-->
             <button type="button" >Remove Course</button>
           </div>
         </div>
@@ -133,17 +154,18 @@
     <div class="body">
 
         <!-- Column 1 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;">
+        <div class="col-sm-4" style="height:100px;">
                 <div class="buttons"> 
+                    <!--View Submitted Course Button-->
                     <button type="button" >View Submitted Courses</button>
                 </div>   
         </div>
 
         <!-- Column 2 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;"></div>
+        <div class="col-sm-4" style="height:100px;"></div>
 
         <!-- Column 3 -->
-        <div class="col-sm-4" style="height:100px; border:1px solid red;"></div>
+        <div class="col-sm-4" style="height:100px;"></div>
 
     </div>
 
