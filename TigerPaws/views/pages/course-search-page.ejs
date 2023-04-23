@@ -1,9 +1,15 @@
+<!--
+                                  COURSE SEARCH PAGE
+Page comes with a search bar for courses and the standard Top Nav Bar.
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Course Search</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bottom three links provide access to BootStrap and CSS stylesheet-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -22,14 +28,18 @@
                     <a class="navbar-brand" href="#" style="color: white;">TigerFeet</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
+                    <!--Find Course Button-->
                     <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+                    <!--Help Button-->
                     <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                    <!--Log Out Button-->
                     <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
                 </ul>
                 </div>
             </nav>
         </div>
 
+        <!--Course Search Bar-->
         <div class="container">
             <form method="post" action="/courseSearch">
                 <div class="input-group">
