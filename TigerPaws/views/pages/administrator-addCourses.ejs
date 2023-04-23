@@ -1,6 +1,15 @@
+<!--
+                                  ADD COURSE PAGE
+Page comes with a submit button for Course Name, Course Number, Course Department, Instructor, Credit Hours,
+Pathways, Prerequisites, Building Name, Room Number, and Course Description. Furthermore, it has a checkbox 
+for Meeting Days, a Submit Button, and the standard Top Nav Bar.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--Page Name-->
   <title>Course List</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +24,15 @@
         <nav class="navbar navbar-inverse" style="background-color: #840705;">
             <div class="container-fluid">
               <div class="navbar-header">
+                <!--Website Name-->
                 <a class="navbar-brand" href="#" style="color: white;">Tiger Feet</a>
               </div>
               <ul class="nav navbar-nav navbar-right">
+                <!--Find Course Button-->
                 <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+                 <!--Help Button-->
                 <li><a href="help-page.ejs"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                 <!--Log Out Button-->
                 <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
               </ul>
             </div>
@@ -63,44 +76,45 @@
             <!--Course Dpt-->
               <label for="dept">Course Department</label>
               <input type="search" class="form-control" id="dept" name="courseDept">
-            <!--instructor-->
-              <label for="instructor">instructor</label>
+            <!--Instructor-->
+              <label for="instructor">Instructor</label>
               <input type="text" class="form-control" id="instructor" name="courseInstructor">
-            <!--credit hours-->
+            <!--Credit Hours-->
               <label for="credits">Credit Hours</label>
               <input type="number" class="form-control" id="credits" name="courseHours">
             </div>
-            <!--pathways-->
+            <!--Pathways-->
             <div class="form-group">
               <label for="pathways">Pathways</label>
               <input type="text" class="form-control" id="pathways" name="coursePathways">
             </div>
-            <!--prerequisites-->
+            <!--Prerequisites-->
             <div class="form-group">
               <label for="prerequisites">Prerequisites</label>
               <input type="text" class="form-control" id="prerequisites" name="coursePrereqs">
             </div>
-            <!--location stuff-->
+            <!--Location-->
             <div class="form-group">
               <label for="building">Building Name</label>
               <input type="text" class="form-horizontal" id="building">
               <label for="roomNum">Room Number</label>
               <input type="number" class="form-horizontal" id="roomNum" name="courseRoomNum">
             </div>
-            <!--meeting time-->
+            <!--Meeting Days-->
             <div class="form-group">
               <label for="meetingDays">Meeting Days</label>
               <input type="checkbox" class="form-horizontal" id="Mon" name="courseMeetingDays">
               
             </div>
-            <!--description-->
+            <!--Course Description-->
             <div class="form-group">
               <label for="courseDescription">Course Description</label>
               <input for="text" class="form-control" id="courseDescription" name="courseDescription">
             </div>
 
+            <!--Submit Button for New Course Info-->
             <div class="form-group">
-              <button type="submit" class="btn btn-default">Submit1</button>
+              <button type="submit" class="btn btn-default">Submit</button>
             </div>
           </form>
         </div>

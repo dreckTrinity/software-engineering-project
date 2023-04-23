@@ -1,7 +1,23 @@
+<!--
+                                  ORIGINAL ADMINISTRATOR PAGE
+Page comes with a button for Add Courses, Remove Courses, and Course Catalogs. Furthermore, it has 
+the standard Top Nav Bar and the Trinity Logo at the bottom of the page.
+
+Improvements from the original page include the use of Bootstrap for centering and placing the HTML
+elements in an invisible grid. It is much easier and faster to use. A CSS style sheet and image file
+was also created to standardize the process of styling reoccuring HTML elements and accessing images. 
+Furthermore, Manage Courses was split into Add Courses and Remove Courses and Manage Users and Manage 
+Students was removed.
+
+Past team comments that the Add Courses and Course Catalog Buttons are the only buttons that work.
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Page Name-->
         <title>Home Page</title>
+        <!--Link to CSS style sheet-->
         <link rel="stylesheet" type= "text/CSS" href="CSS/homepages.css">
     </head>
    <style>
@@ -63,22 +79,34 @@
    </style>
     <body>
         <div class="navigationPanel">
+           <!--Role Name-->
            <p>Administrator</p> 
            <div></div>
            <div></div>
+           <!--Help Button-->
            <button type="button" onclick ="location.href = 'help-page';">Help</button>
+           <!--Log Out Button-->
            <a href>Log Out</a>
         </div>
+
+        <!--Page's main buttons-->
         <div class = "body">
             <div></div>
             <div class="buttons">
+                <!--Add Courses button-->
                 <button type="button" onclick="location.href='administrator-addCourses';">Add Courses</button> <!--only this button works--> 
+                <!--Remove Courses button-->
                 <button type="button" onclick="location.href = 'administrator-removeCourses';">Remove Courses</button> 
+                
                 <!--<button type="button">Manage Students</button> ?-->
+
+                <!--Course Catalogs button-->
                 <button type="button" onclick="location.href='course-list-page';">Course Catalogs</button> <!--and this button too-->
             </div>
             <div></div>
         </div>
+
+        <!-- Trinity Logo at the bottom of the page -->
         <div class = "logo">
             <div></div>
             <img src="Resources/TrinityLogo.png"style="width: 400px; height=400px">
