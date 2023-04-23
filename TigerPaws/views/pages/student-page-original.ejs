@@ -1,10 +1,18 @@
+<!--
+                                  ORIGINAL STUDENT PAGE
+Page comes with a button for Search Courses and View Registered Courses. Furthermore, it has the standard 
+Top Nav Bar and the Trinity Logo at the bottom of the page.
+
+Initially difficult to center buttons, words, and logo. The logo is linked from the Trinity wikipedia page.
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Home Page</title>
     </head>
     <style>
-
+        /*Elements Styling*/
         body {
             background-color: #ffffff;
         }
@@ -52,12 +60,13 @@
 
     </style>
     <body>
+        <!-- Top red navigation bar -->
         <div class="topnav">
-
+            <!-- Role title in the upleft corner -->
             <div class="title" style = "position: relative; left: 3%; top:20%">
                 <p>Student</p>
             </div>
-
+            <!-- Help and Log Out button in the upright corner -->
             <div class="buttons" style ="position: relative; left:75%; top:-60%;">
                 <button type="button">Help</button>
                 <button type="button">Log Out</button>
@@ -65,13 +74,17 @@
 
         </div>
 
+        <!-- Page's main buttons -->
         <div class="body" style = "position: relative; left:30%; top:30%;">
 
+            <!-- Search Courses Button -->
             <button type="button">Search Courses</button>
+            <!-- View Registered Courses Button -->
             <button type="button">View Registered Classes</button>
 
         </div>
 
+        <!-- Trinity Logo at the bottom of the page -->
         <div class="logo" style="position: relative; left:35%; top:35%">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Trinity_Tigers_logo.svg/1200px-Trinity_Tigers_logo.svg.png">
         </div>

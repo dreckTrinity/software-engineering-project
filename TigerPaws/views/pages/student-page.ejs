@@ -1,7 +1,18 @@
+<!--
+                                  REMADE STUDENT PAGE
+Page comes with a button for Seearch Courses and View Registered Courses. Furthermore, it has the 
+standard Top Nav Bar and the Trinity Logo at the bottom of the page.
+
+Improvements from the original page include the use of Bootstrap for centering and placing the HTML
+elements in an invisible grid. It is much easier and faster to use. A CSS style sheet and image file
+was also created to standardize the process of styling reoccuring HTML elements and accessing images. 
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Home Page</title>
+        <!--Link to CSS style sheet-->
         <link rel="stylesheet" href="CSS/homepages.css">
     </head>
     <style>
@@ -63,22 +74,30 @@
 </style>
     <body>
         <div class="navigationPanel">
+           <!--Navigation Bar at the Top of the Screen-->
            <p>Student</p> 
            <div></div>
            <div></div>
+           <!--Help Button-->
            <a href>Help</a>
+           <!--Log Out Button-->
            <a href>Log Out</a>
         </div>
         <div class = "body">
             <div></div>
+            <!--Main Page Buttons-->
             <div class="buttons">
+
+                <!--Search Courses Button-->
                 <button type="button" onclick = "location.href = 'course-search-page';">Search Courses</button>
+                <!--View Registed Classes Button-->
                 <button type="button" onclick = "location.href = 'manage-courses-student';">View Registered Classes</button>
             </div>
             <div></div>
         </div>
         <div class = "logo">
             <div></div>
+            <!-- Trinity Logo at the bottom of the page -->
             <img src="Resources/TrinityLogo.png"style="width: 400px; height=400px">
         </div>
     </body>
