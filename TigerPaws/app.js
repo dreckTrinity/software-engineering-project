@@ -45,6 +45,14 @@ db.once("open", function () {
 
 
 //Routes that can be made into separate files with routes?
+app.route("/registered-courses").get((req, res) => {
+    res.render('pages/registered-courses.ejs');
+});
+
+app.route("/viewCourses").get((req, res) => {
+    res.render('pages/viewCourses.ejs');
+});
+
 app.route("/register").get((req, res) => {
     res.render('pages/register.ejs');
 });

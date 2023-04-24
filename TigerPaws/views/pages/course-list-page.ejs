@@ -126,7 +126,7 @@ Days, and Pathways. Furthermore, it has the standard Top Nav Bar and a table for
                 <td><%= courses[i].meetingTime.days%></td>
                 <td><%= courses[i].meetingTime.startTime%> - <%= courses[i].meetingTime.endTime%></td>
                 <td><%= courses[i].instructor%></td>
-                <td><button type="button" class="btn" style="background-color: #ddb9b6;" onclick = "location.href = 'register' /*+ '?courseId'+ courses[i]._id.str;*/">Register</button></td>
+                <td><button type="button" class="btn" style="background-color: #ddb9b6;" onclick = "location.href = 'register' + '?courseId'+ courses[i]._id.str;">Register</button></td>
 
             </tr>
             <% } %>   

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registered Courses</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bottom three links provide access to BootStrap and CSS stylesheet-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!--Nav Bar at top of Screen-->
+    <div class="container">
+        <nav class="navbar navbar-inverse" style="background-color: #840705;">
+            <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="color: white;">TigerFeet</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <!--Find Course Button-->
+            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Course</a></li>
+            <!--Help Button-->
+            <li><a href="#" data-toggle="popover" title="Follow this Link for Online Resources" data-content="Resources"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+            <!--Log Out Button-->
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+          </ul>
+            </div>
+          </nav>
+    </div>
+
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th scope="col">Class ID</th>
+                <th scope="col">Course Info</th>
+                <th scope="col">Days</th>
+                <th scope="col">Time</th>
+                <th scope="col">Instructor</th>
+            </tr>
+
+            <% for(var i=0; i<courses.length; i++) {%>
+                <tr>
+    
+    
+                    <td><%= courses[i].courseDept %>-<%= courses[i].courseNum %> <%= courses[i].courseSection %></td> 
+                    <td><button data-toggle="collapse" data-target="#demo" style="background-color:#b9291b8e;"><%= courses[i].name %></button>
+    
+                    <div id="demo" class="collapse"><%= courses[i].courseDescription %>
+                    </div></td>
+                    <td><%= courses[i].meetingTime.days%></td>
+                    <td><%= courses[i].meetingTime.startTime%> - <%= courses[i].meetingTime.endTime%></td>
+                    <td><%= courses[i].instructor%></td>
+                    <td><button type="button" class="btn" style="background-color: #ddb9b6;" onclick = "location.href = 'register' + '?courseId'+ courses[i]._id.str;">Register</button></td>
+    
+                </tr>
+                <% } %>   
+
+        </table>
+    </div>
+</body>
+</html>

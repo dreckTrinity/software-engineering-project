@@ -46,6 +46,27 @@ app.post("/userLogin", async(req, res) => {
   
   })
 
+  app.post("/viewCourses", async(req, res) =>{
+    const email = req.body.email //We use email because it should be unique for every user
+    const password = req.body.password //To make sure people cant just sign anyone up for any class
+
+    const userMatches = await userModel.find({email: email,password: password}).exec();
+
+    if(userMatches.length == 0) {
+      console.log("No such user found. Make sure email or password is correct")
+      res.render(path.join(__dirname, '/../../views/pages/viewCourses.ejs'))
+    } else {
+      const courses = userMatches[0].registeredCourses
+
+      const courseMatch = await courseModel.findById(id)
+
+
+      res.render(path.join(__dirname, '/../../views/pages/registered-courses.ejs') , {courses:courseMatch})
+
+    }
+
+  })
+
   app.post("/register", async(req, res) =>{
 
     //Gets info from the HTML form
@@ -71,12 +92,12 @@ app.post("/userLogin", async(req, res) => {
 
       } else {
         user = userMatches[0] //Get the one user out of the Array
-
+        courseID = courseMatch[0]._id.toString
         const filter = {email: email}
   
         const updateDoc = {
           $push: {
-            registeredCourses: course
+            registeredCourses: courseID
           }
         }
         
