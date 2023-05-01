@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { userTypes, restrictAccess } = require('../functions/authentication/authentication');
+const path = require('path');
+const fs = require('fs');
 
 // Set up routes
 router.get("/", (req, res) => {
@@ -54,6 +56,13 @@ router.get("/register", restrictAccess(userTypes.STUDENT), (req, res) => {
 
 router.get("/manage-courses-student", restrictAccess(userTypes.STUDENT),(req,res) => {
     res.render('pages/manage-courses-student');
+});
+
+router.get('/registration.js', (req, res) => {
+    const filePath = path.join(__dirname, '..', 'public', 'javascripts', 'registration.js');
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    res.set('Content-Type', 'application/javascript');
+    res.send(fileContents);
 });
 
 module.exports = router;
