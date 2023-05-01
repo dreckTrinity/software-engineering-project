@@ -52,12 +52,18 @@ router.post("/register", async(req, res) =>{
       console.log("Inside /register post");
       const classId = new mongoose.Types.ObjectId(req.body.classId);
       console.log("After ObjectID call");
-      const userId = req.session.user._id;
+      const USER = req.session.user
+      if (!USER){
+        const userId = req.session.user._id;
+        console.log(userId);
 
-      const savedUser = await addToList(userId, classId);
+        const savedUser = await addToList(userId, classId);
 
-      console.log(savedUser.message);
-      res.send(savedUser.message);
+        console.log(savedUser.message);
+        res.send(savedUser.message);
+      } else {
+        console.log("No one is currently logged in so you cannot be registered for a class.");
+      }
 
       res.render(path.join(__dirname, '/../../views/pages/student-page.ejs'))
   } catch (err) {
