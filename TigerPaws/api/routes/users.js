@@ -49,8 +49,10 @@ router.post("/userLogin", async(req, res) => {
 
 router.post("/register", async(req, res) =>{
   try{
-      const classId = mongoose.Types.ObjectId(req.body.classId);
-      const userId = req.session.user._id
+      console.log("Inside /register post");
+      const classId = new mongoose.Types.ObjectId(req.body.classId);
+      console.log("After ObjectID call");
+      const userId = req.session.user._id;
 
       const savedUser = await addToList(userId, classId);
 
@@ -63,7 +65,7 @@ router.post("/register", async(req, res) =>{
       console.error(err);
       res.status(500).send('Internal Server Error');
   }
-})  
+});  
 
 async function addToList(studentId, classId) {
   try {
